@@ -1,3 +1,5 @@
+// THIS WAS CONVERTED FROM MY CODE BY CHAT GPT -- MAY NOT WORK PROPERLY
+
 #include "HomeSpan.h"
 #include <WiFi.h>
 #include <WebServer.h>
@@ -8,7 +10,7 @@ const char* password = "YOUR_WIFI_PASSWORD";
 const char* ap_ssid = "ESP32_AP";
 const char* ap_password = "12345678";
 
-WebServer server(8080);  // Changed from port 80 to 8080
+WebServer server(8080);  
 
 int ledPin = 2; 
 int powerPin = 25;
@@ -150,7 +152,7 @@ void setup() {
       new Characteristic::Name("Leak Sensor");
     new DEV_LeakSensor();
   
-  Serial.println("\n📱 HomeKit Pairing Code: 466-37-726");
+  Serial.println("\n📱 HomeKit Pairing Code: 4663-7726");
 
   // Access Point setup
   WiFi.softAP(ap_ssid, ap_password);
