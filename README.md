@@ -3,8 +3,8 @@ A Wi-Fi-enabled **water leak detection** system built with an ESP32 and water se
 🌐 A live web dashboard to monitor water levels in real-time  
 🍎 Apple HomeKit integration for instant alerts when a leak is detected  
 
-View live water level data through a local web interface hosted by the ESP32.  
-HomeKit Integration: Receive instant notifications on your Apple devices when a leak occurs.  
+View live water level data through a local web interface hosted by the ESP32 (only works while connected to the same Wi-Fi network).    
+HomeKit Integration: Receive instant notifications on your Apple devices when a leak occurs (always works).  
 Compact & Low Power: Designed for continuous operation with minimal energy usage.   
 
 The water sensor continuously detects the presence of water, then when water is detected beyond a threshold, the device:  
