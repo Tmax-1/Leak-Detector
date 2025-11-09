@@ -29,8 +29,8 @@ const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";  
 
 
-#**Using**
+# **Using**
 Upload the code to the ESP32. To connect to an Apple device, open the "Home" app and add an accessory. Click More Options and select the sensor. Enter the access code, and you're done.
 
 
-<small>This project is licensed under the MIT License — feel free to use and modify it.</small>
+<sub>This project is licensed under the MIT License — feel free to use and modify it.</sub>
