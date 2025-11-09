@@ -8,7 +8,7 @@ const char* password = "YOUR_WIFI_PASSWORD";
 const char* ap_ssid = "ESP32_AP";
 const char* ap_password = "12345678";
 
-WebServer server(8080);  // Changed from port 80 to 8080
+WebServer server(8080);  
 
 int ledPin = 2; 
 int powerPin = 25;
@@ -40,12 +40,12 @@ struct DEV_SewageOverflow : Service::LeakSensor {
     if (sewageLevel >= 250) {
       if (leakDetected->getVal() == 0) {
         leakDetected->setVal(1);
-        Serial.println("⚠️ ALERT: SEWAGE OVERFLOW DETECTED!");
+        Serial.println("ALERT: SEWAGE OVERFLOW DETECTED!");
       }
     } else {
       if (leakDetected->getVal() == 1) {
         leakDetected->setVal(0);
-        Serial.println("✅ Sewage level normal");
+        Serial.println("Sewage level normal");
       }
     }
   }
@@ -106,7 +106,7 @@ function updateWater() {
     } else {
       document.body.style.backgroundColor = 'red';
       document.body.style.color = 'white';
-      statusText = ' OVERFLOW DETECTED!';
+      statusText = 'SEWAGE OVERFLOW DETECTED!';
     }
     
     document.getElementById('status').innerText = 'Status: ' + statusText;
@@ -150,11 +150,11 @@ void setup() {
       new Characteristic::Name("Sewage Overflow Sensor");
     new DEV_SewageOverflow();
   
-  Serial.println("\n📱 HomeKit Pairing Code: 466-37-726");
+  Serial.println("\n HomeKit Pairing Code: 4663-7726");
 
   // Access Point setup
   WiFi.softAP(ap_ssid, ap_password);
-  Serial.println("✅ Access Point started");
+  Serial.println("Access Point started");
   Serial.print("AP IP: ");
   Serial.println(WiFi.softAPIP());
 
@@ -163,7 +163,7 @@ void setup() {
   server.on("/water", handleWater);
   server.begin();
 
-  Serial.println("✅ HTTP server started on port 8080");
+  Serial.println("HTTP server started on port 8080");
   Serial.println("\n========================================");
   Serial.println("Access web interface at:");
   Serial.println("  http://192.168.1.173:8080");
