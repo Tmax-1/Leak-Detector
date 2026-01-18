@@ -17,7 +17,7 @@ Water Sensor
 Power Supply (I used 5V USB)  
 
 
-# **Softwere**
+# **Software**
 * Arduino IDE or a way to upload code (VS Code's PlatformIO)
 * Libraries:
   * WiFi.h
